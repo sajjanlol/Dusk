@@ -1,0 +1,17 @@
+[Unit]
+Description=Dusk — Spotify Music Device
+After=network-online.target sound.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/dusk
+ExecStart=/usr/bin/python3 src/system/boot.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+*.egg-info/
+
+# Credentials — NEVER commit these
+/etc/raspotify/conf
+config/secrets.conf
+*.credentials
+
+# Logs
+*.log
+/var/log/dusk.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Pygame cache
+*.pyc
